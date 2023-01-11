@@ -26,8 +26,9 @@ export const project: NProject.TProject = {
                 "glossary": {
                     'imports': wd({}),
                     'types': types({
+                        "Arguments": array(str()),
                         "MainData": group({
-                            "arguments": member(array(str()))
+                            "arguments": member(ref("Arguments"))
                         })
                     }),
                     'functions': wd({}),
