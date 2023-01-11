@@ -24,22 +24,18 @@ export const project: NProject.TProject = {
         "main": {
             'definition': {
                 "glossary": {
-                    'imports': wd({
-                    }),
+                    'imports': wd({}),
                     'types': types({
                         "MainData": group({
                             "arguments": member(array(str()))
                         })
                     }),
-                    'functions': wd({
-                    }),
-                    'callbacks': wd({
-                    }),
+                    'functions': wd({}),
+                    'callbacks': wd({}),
                     'interfaces': wd({}),
                 },
                 "api": {
-                    'imports': wd({
-                    }),
+                    'imports': wd({}),
                     'algorithms': wd({
                         "setExitCodeToFailed": ['procedure', ['null', null]],
                         "writeToStdErr": ['procedure', ['type', string()]],

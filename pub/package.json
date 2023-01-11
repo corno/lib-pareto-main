@@ -15,6 +15,8 @@
   "version": "0.1.0",
   "dependencies": {
     "pareto-core-lib": "^0.17.0",
+    "pareto-core-raw": "^0.7.0",
+    "pareto-core-state": "^0.12.0",
     "pareto-core-types": "^0.10.0"
   },
   "content-fingerprint": "a0f0b2312d28882aea273cc58d1b07d7a053a6d1"
