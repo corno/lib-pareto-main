@@ -33,13 +33,23 @@ export const project: NProject.TProject = {
                     'functions': wd({}),
                     'callbacks': wd({}),
                     'interfaces': wd({}),
+                    'pipes': wd({}),
                 },
                 "api": {
                     'imports': wd({}),
                     'algorithms': wd({
-                        "setExitCodeToFailed": ['procedure', ['null', null]],
-                        "writeToStdErr": ['procedure', ['type', string()]],
-                        "writeToStdOut": ['procedure', ['type', string()]],
+                        "setExitCodeToFailed": {
+                            'definition': ['procedure', ['null', null]],
+                            'type': ['reference', null],
+                        },
+                        "writeToStdErr": {
+                            'definition': ['procedure',['type', string()]],
+                            'type': ['reference', null],
+                        },
+                        "writeToStdOut": {
+                            'definition': ['procedure',['type', string()]],
+                            'type': ['reference', null],
+                        },
                     })
                 },
             },

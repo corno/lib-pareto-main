@@ -6,7 +6,6 @@ import * as pr from "pareto-core-raw"
 import * as tst from "lib-pareto-test"
 
 import * as api from "../../interface"
-import * as us from "res-pareto-ugly-stuff"
 
 
 import * as pub from "../../../../pub"
