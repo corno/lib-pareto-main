@@ -14,10 +14,11 @@
   "types": "dist/index.d.ts",
   "version": "0.3.1",
   "dependencies": {
+    "glo-pareto-common": "^0.4.0",
     "pareto-core-lib": "^0.17.0",
     "pareto-core-raw": "^0.7.0",
     "pareto-core-state": "^0.12.0",
     "pareto-core-types": "^0.10.0"
   },
-  "content-fingerprint": "d6f19f55c341bb0a51b5d14ffcce8439dd8f9b42"
+  "content-fingerprint": "65bb7012f771be3a8ce06bc088246344c3d9c7ea"
 }

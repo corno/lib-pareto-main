@@ -2,14 +2,13 @@ import * as pr from "pareto-core-raw"
 import {
     externalReference as er,
     string as str,
-    nullType,
-    type,
     reference as ref,
     boolean as bln,
     number as nr,
     nested,
     optional,
     array,
+    externalTypeReference,
 } from "lib-pareto-typescript-project/dist/modules/glossary/api/shorthands.p"
 import { dictionary, group, member, taggedUnion, types, _function } from "lib-pareto-typescript-project/dist/modules/glossary/api/shorthands.p"
 
@@ -38,18 +37,20 @@ export const $: mmoduleDefinition.TModuleDefinition = {
         'pipes': d({}),
     },
     'api': {
-        'imports': d({}),
+        'imports': d({
+            "common": "glo-pareto-common",
+        }),
         'algorithms': d({
             "setExitCodeToFailed": {
-                'definition': ['procedure', ['null', null]],
+                'definition': ['procedure', externalTypeReference("common", "Null")],
                 'type': ['reference', null],
             },
             "writeToStdErr": {
-                'definition': ['procedure', ['type', string()]],
+                'definition': ['procedure', externalTypeReference("common", "String")],
                 'type': ['reference', null],
             },
             "writeToStdOut": {
-                'definition': ['procedure', ['type', string()]],
+                'definition': ['procedure', externalTypeReference("common", "String")],
                 'type': ['reference', null],
             },
         })
