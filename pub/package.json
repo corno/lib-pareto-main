@@ -12,7 +12,7 @@
     "url": "http://github.com/corno/lib-pareto-main.git"
   },
   "types": "dist/index.d.ts",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "dependencies": {
     "glo-pareto-common": "^0.4.0",
     "pareto-core-lib": "^0.17.0",
