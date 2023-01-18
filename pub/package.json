@@ -12,14 +12,16 @@
     "url": "http://github.com/corno/lib-pareto-main.git"
   },
   "types": "dist/index.d.ts",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "dependencies": {
-    "@types/node": "^18.11.18",
     "glo-pareto-common": "^0.4.0",
     "pareto-core-lib": "^0.17.0",
     "pareto-core-raw": "^0.7.0",
     "pareto-core-state": "^0.12.0",
     "pareto-core-types": "^0.10.0"
   },
-  "content-fingerprint": "35bcb003111354451b427c2bfa0ae5471b372e31"
+  "devDependencies": {
+    "@types/node": "^18.11.18"
+  },
+  "content-fingerprint": "ce9de9363bb0d5eaa5b1f3b492b9a5b2206498b3"
 }
