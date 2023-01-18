@@ -41,6 +41,14 @@ export const $: mmoduleDefinition.TModuleDefinition = {
             "common": "glo-pareto-common",
         }),
         'algorithms': d({
+            "log": {
+                'definition': ['procedure', externalTypeReference("common", "String")],
+                'type': ['reference', null],
+            },
+            "logError": {
+                'definition': ['procedure', externalTypeReference("common", "String")],
+                'type': ['reference', null],
+            },
             "setExitCodeToFailed": {
                 'definition': ['procedure', externalTypeReference("common", "Null")],
                 'type': ['reference', null],
