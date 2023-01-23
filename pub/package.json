@@ -16,12 +16,12 @@
   "dependencies": {
     "glo-pareto-common": "^0.5.0",
     "pareto-core-lib": "^0.17.0",
-    "pareto-core-raw": "^0.7.0",
+    "pareto-core-raw": "^0.7.4",
     "pareto-core-state": "^0.12.0",
     "pareto-core-types": "^0.10.0"
   },
   "devDependencies": {
     "@types/node": "^18.11.18"
   },
-  "content-fingerprint": "278cb3dbbe69956777722d7b60516c801c0bf4b6"
+  "content-fingerprint": "859326c46bd3ce81e02b98e9fbed9d6b3b6a473b"
 }
