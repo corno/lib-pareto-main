@@ -14,8 +14,6 @@ import {
 } from "lib-pareto-typescript-project/dist/modules/glossary/api/shorthands.p"
 import { dictionary, group, member, taggedUnion, types, _function } from "lib-pareto-typescript-project/dist/modules/glossary/api/shorthands.p"
 
-
-import { string, reference, externalReference, number, boolean } from "lib-pareto-typescript-project/dist/modules/moduleDefinition/api/shorthands.p"
 import * as mmoduleDefinition from "lib-pareto-typescript-project/dist/modules/moduleDefinition"
 
 const d = pr.wrapRawDictionary
