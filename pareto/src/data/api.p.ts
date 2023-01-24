@@ -9,6 +9,7 @@ import {
     optional,
     array,
     externalTypeReference,
+    procedure,
 } from "lib-pareto-typescript-project/dist/modules/glossary/api/shorthands.p"
 import { dictionary, group, member, taggedUnion, types, _function } from "lib-pareto-typescript-project/dist/modules/glossary/api/shorthands.p"
 
@@ -21,7 +22,9 @@ const d = pr.wrapRawDictionary
 
 export const $: mmoduleDefinition.TModuleDefinition = {
     'glossary': {
-        'imports': d({}),
+        'imports': d({
+            "common": "glo-pareto-common",
+        }),
         'namespace': {
             'types': types({
                 "Arguments": array(str()),
@@ -32,9 +35,9 @@ export const $: mmoduleDefinition.TModuleDefinition = {
             'interfaces': d({}),
 
         },
-        'functions': d({}),
-        'callbacks': d({}),
-        'pipes': d({}),
+        'functions': d({
+            "Signal": procedure(externalTypeReference("common", "Null"))
+        }),
     },
     'api': {
         'imports': d({
@@ -42,23 +45,37 @@ export const $: mmoduleDefinition.TModuleDefinition = {
         }),
         'algorithms': d({
             "log": {
-                'definition': ['procedure', externalTypeReference("common", "String")],
+                'definition': {
+                    'context': ['import', "common"],
+                    'function': "Log",
+                },
                 'type': ['reference', null],
             },
             "logError": {
-                'definition': ['procedure', externalTypeReference("common", "String")],
+                'definition': {
+                    'context': ['import', "common"],
+                    'function': "Log",
+                },
                 'type': ['reference', null],
             },
             "setExitCodeToFailed": {
-                'definition': ['procedure', externalTypeReference("common", "Null")],
+                'definition': {
+                    'function': "Signal",
+                },
                 'type': ['reference', null],
             },
             "writeToStdErr": {
-                'definition': ['procedure', externalTypeReference("common", "String")],
+                'definition': {
+                    'context': ['import', "common"],
+                    'function': "Log",
+                },
                 'type': ['reference', null],
             },
             "writeToStdOut": {
-                'definition': ['procedure', externalTypeReference("common", "String")],
+                'definition': {
+                    'context': ['import', "common"],
+                    'function': "Log",
+                },
                 'type': ['reference', null],
             },
         })

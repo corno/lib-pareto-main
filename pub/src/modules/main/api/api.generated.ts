@@ -4,15 +4,15 @@ import * as glo from "./types.generated"
 
 import * as mcommon from "glo-pareto-common"
 
-export type Clog = pt.Procedure<mcommon.TString>
+export type Clog = mcommon.FLog
 
-export type ClogError = pt.Procedure<mcommon.TString>
+export type ClogError = mcommon.FLog
 
-export type CsetExitCodeToFailed = pt.Procedure<mcommon.TNull>
+export type CsetExitCodeToFailed = glo.FSignal
 
-export type CwriteToStdErr = pt.Procedure<mcommon.TString>
+export type CwriteToStdErr = mcommon.FLog
 
-export type CwriteToStdOut = pt.Procedure<mcommon.TString>
+export type CwriteToStdOut = mcommon.FLog
 
 export type API = {
     log: Clog
