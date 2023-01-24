@@ -10,6 +10,7 @@ import {
     array,
     externalTypeReference,
     procedure,
+    typeReference,
 } from "lib-pareto-typescript-project/dist/modules/glossary/api/shorthands.p"
 import { dictionary, group, member, taggedUnion, types, _function } from "lib-pareto-typescript-project/dist/modules/glossary/api/shorthands.p"
 
@@ -36,7 +37,7 @@ export const $: mmoduleDefinition.TModuleDefinition = {
 
         },
         'functions': d({
-            "Signal": procedure(externalTypeReference("common", "Null"))
+            "Main": procedure(typeReference("MainData"))
         }),
     },
     'api': {
@@ -60,6 +61,7 @@ export const $: mmoduleDefinition.TModuleDefinition = {
             },
             "setExitCodeToFailed": {
                 'definition': {
+                    'context': ['import', "common"],
                     'function': "Signal",
                 },
                 'type': ['reference', null],

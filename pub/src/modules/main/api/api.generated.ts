@@ -8,7 +8,7 @@ export type Clog = mcommon.FLog
 
 export type ClogError = mcommon.FLog
 
-export type CsetExitCodeToFailed = glo.FSignal
+export type CsetExitCodeToFailed = mcommon.FSignal
 
 export type CwriteToStdErr = mcommon.FLog
 

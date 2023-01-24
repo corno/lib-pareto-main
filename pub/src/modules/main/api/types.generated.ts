@@ -7,4 +7,4 @@ export type TMainData = {
     readonly 'arguments': TArguments
 }
 
-export type FSignal = ($: mcommon.TNull,) => void
+export type FMain = ($: TMainData,) => void
