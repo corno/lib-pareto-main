@@ -1,9 +1,9 @@
 import { API } from "./api"
-import { $$ as ilog } from "./implementations/log.p"
-import { $$ as ilogError } from "./implementations/logError.p"
-import { $$ as isetExitCodeToFailed } from "./implementations/setExitCodeToFailed.p"
-import { $$ as iwriteToStdErr } from "./implementations/writeToStdErr.p"
-import { $$ as iwriteToStdOut } from "./implementations/writeToStdOut.p"
+import { $$ as ilog } from "./implementations/log.native"
+import { $$ as ilogError } from "./implementations/logError.native"
+import { $$ as isetExitCodeToFailed } from "./implementations/setExitCodeToFailed.native"
+import { $$ as iwriteToStdErr } from "./implementations/writeToStdErr.native"
+import { $$ as iwriteToStdOut } from "./implementations/writeToStdOut.native"
 
 export const $a: API = {
     'log': ilog,
