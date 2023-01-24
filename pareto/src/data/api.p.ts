@@ -21,6 +21,7 @@ const d = pr.wrapRawDictionary
 
 export const $: mmoduleDefinition.TModuleDefinition = {
     'glossary': {
+        'parameters': d({}),
         'imports': d({
             "common": "glo-pareto-common",
         }),
