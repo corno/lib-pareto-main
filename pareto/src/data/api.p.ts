@@ -25,16 +25,13 @@ export const $: mmoduleDefinition.TModuleDefinition = {
         'imports': d({
             "common": "glo-pareto-common",
         }),
-        'namespace': {
-            'types': types({
-                "Arguments": array(str()),
-                "MainData": group({
-                    "arguments": member(ref("Arguments"))
-                })
-            }),
-            'interfaces': d({}),
-
-        },
+        'types': types({
+            "Arguments": array(str()),
+            "MainData": group({
+                "arguments": member(ref("Arguments"))
+            })
+        }),
+        'interfaces': d({}),
         'functions': d({
             "Main": procedure(typeReference("MainData"))
         }),
