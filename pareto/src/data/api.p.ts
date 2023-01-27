@@ -25,6 +25,7 @@ export const $: mmoduleDefinition.TModuleDefinition = {
         'imports': d({
             "common": "glo-pareto-common",
         }),
+        'templates': d({}),
         'types': types({
             "Arguments": array(str()),
             "MainData": group({
