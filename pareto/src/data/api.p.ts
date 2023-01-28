@@ -1,23 +1,21 @@
 import * as pr from 'pareto-core-raw'
+
 import {
-    externalReference as er,
-    string as str,
-    reference as ref,
+    string,
+    reference,
     boolean as bln,
     number as nr,
     nested,
-    optional,
     array,
-    externalTypeReference,
     procedure,
-    typeReference,
+    typeReference, dictionary, group, member, taggedUnion, types, _function
 } from "lib-pareto-typescript-project/dist/modules/glossary/api/shorthands.p"
-import { dictionary, group, member, taggedUnion, types, _function } from "lib-pareto-typescript-project/dist/modules/glossary/api/shorthands.p"
+
+import { definitionReference, constructor, algorithm } from "lib-pareto-typescript-project/dist/modules/moduleDefinition/api/shorthands.p"
 
 import * as mmoduleDefinition from "lib-pareto-typescript-project/dist/modules/moduleDefinition"
 
 const d = pr.wrapRawDictionary
-
 
 export const $: mmoduleDefinition.TModuleDefinition = {
     'glossary': {
@@ -27,9 +25,9 @@ export const $: mmoduleDefinition.TModuleDefinition = {
         }),
         'templates': d({}),
         'types': types({
-            "Arguments": array(str()),
+            "Arguments": array(string()),
             "MainData": group({
-                "arguments": member(ref("Arguments"))
+                "arguments": member(reference("Arguments"))
             })
         }),
         'interfaces': d({}),
@@ -42,41 +40,11 @@ export const $: mmoduleDefinition.TModuleDefinition = {
             "common": "glo-pareto-common",
         }),
         'algorithms': d({
-            "log": {
-                'definition': {
-                    'context': ['import', "common"],
-                    'function': "Log",
-                },
-                'type': ['reference', null],
-            },
-            "logError": {
-                'definition': {
-                    'context': ['import', "common"],
-                    'function': "Log",
-                },
-                'type': ['reference', null],
-            },
-            "setExitCodeToFailed": {
-                'definition': {
-                    'context': ['import', "common"],
-                    'function': "Signal",
-                },
-                'type': ['reference', null],
-            },
-            "writeToStdErr": {
-                'definition': {
-                    'context': ['import', "common"],
-                    'function': "Log",
-                },
-                'type': ['reference', null],
-            },
-            "writeToStdOut": {
-                'definition': {
-                    'context': ['import', "common"],
-                    'function': "Log",
-                },
-                'type': ['reference', null],
-            },
+            "log": algorithm(definitionReference("common", "Log")),
+            "logError": algorithm(definitionReference("common", "Log")),
+            "setExitCodeToFailed": algorithm(definitionReference("common", "Signal")),
+            "writeToStdErr": algorithm(definitionReference("common", "Log")),
+            "writeToStdOut": algorithm(definitionReference("common", "Log")),
         })
     },
 }

@@ -14,7 +14,7 @@
   "types": "dist/index.d.ts",
   "version": "0.11.0",
   "dependencies": {
-    "glo-pareto-common": "^0.8.0",
+    "glo-pareto-common": "^0.9.0",
     "pareto-core-lib": "^0.17.0",
     "pareto-core-raw": "^0.7.4",
     "pareto-core-state": "^0.12.0",
@@ -23,5 +23,5 @@
   "devDependencies": {
     "@types/node": "^18.11.18"
   },
-  "content-fingerprint": "96fea8c8a23b787f660bcd40dce0e5e389500f17"
+  "content-fingerprint": "203255b529220f21f489dafa8759cae09bcc0e3c"
 }
