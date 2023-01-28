@@ -6,10 +6,10 @@
   ],
   "license": "ISC",
   "main": "dist/index.js",
-  "name": "lib-pareto-main",
+  "name": "res-pareto-main",
   "repository": {
     "type": "git",
-    "url": "http://github.com/corno/lib-pareto-main.git"
+    "url": "http://github.com/corno/res-pareto-main.git"
   },
   "types": "dist/index.d.ts",
   "version": "0.11.0",
