@@ -1,27 +1,24 @@
 {
+  "name": "res-pareto-collation",
   "author": "Corno",
-  "description": "main function utils",
-  "files": [
-    "dist"
-  ],
   "license": "ISC",
-  "main": "dist/index.js",
-  "name": "res-pareto-main",
-  "repository": {
-    "type": "git",
-    "url": "http://github.com/corno/res-pareto-main.git"
-  },
-  "types": "dist/index.d.ts",
-  "version": "0.11.0",
+  "description": "provides functionality to implement the main (executable) function in Pareto",
   "dependencies": {
-    "glo-pareto-common": "^0.9.0",
-    "pareto-core-lib": "^0.17.0",
-    "pareto-core-raw": "^0.7.4",
-    "pareto-core-state": "^0.12.0",
-    "pareto-core-types": "^0.10.0"
+    "glo-pareto-common": "^0.10.0",
+    "pareto-core-internals": "^0.11.0"
   },
   "devDependencies": {
     "@types/node": "^18.11.18"
   },
-  "content-fingerprint": "203255b529220f21f489dafa8759cae09bcc0e3c"
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/corno/res-pareto-collation.git"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "version": "0.0.0",
+  "content-fingerprint": "f24a33dce79bec8c5a7dd6cedf8ed6063bd0aab2"
 }

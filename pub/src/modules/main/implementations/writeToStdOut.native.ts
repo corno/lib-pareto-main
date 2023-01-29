@@ -1,7 +1,7 @@
-import * as pl from 'pareto-core-lib'
+import * as pi from 'pareto-core-internals'
 
 import * as api from "../api"
 
 export const $$: api.CwriteToStdOut = ($) => {
-    pl.implementMe("IMPLEMENT main:writeToStdOut")
+    pi.panic("IMPLEMENT main:writeToStdOut")
 }
