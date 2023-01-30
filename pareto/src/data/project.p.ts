@@ -12,21 +12,18 @@ export const $: mproject.TProject = {
     'author': "Corno",
     'description': "provides functionality to implement the main (executable) function in Pareto",
     'license': "ISC",
-
-    'type': ['resource',  {
-        'devDependencies': d({
-            "@types/node": {},
-        }),
-    }],
-    'modules': d({
-        "main": {
-            'definition': api,
-
-        },
-    }),
-    'main': "main",
+    
     'pubdependencies': d({
         "glo-pareto-common": {},
     }),
-    'testdependencies': d({}),
+    'type': ['resource', {
+        'definition': api,
+        'devDependencies': d({
+            "@types/node": {},
+        }),
+        'test': {
+            'dependencies': d({
+            }),
+        }
+    }],
 }
