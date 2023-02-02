@@ -2,7 +2,6 @@
   "author": "Corno",
   "license": "ISC",
   "description": "provides functionality to implement the main (executable) function in Pareto",
-
   "dependencies": {
     "glo-pareto-common": "^0.11.0",
     "pareto-core-internals": "^0.11.0"
@@ -14,8 +13,12 @@
     "dist"
   ],
   "repository": {
-    "type": "git"
+    "type": "git",
+    "url": "http://github.com/corno/res-pareto-main.git"
   },
   "main": "dist/index.js",
-  "types": "dist/index.d.ts"
+  "types": "dist/index.d.ts",
+  "name": "res-pareto-main",
+  "version": "0.12.0",
+  "content-fingerprint": "33f70537f41bbd91b2e4f4146fdf8a38e17d6387"
 }
