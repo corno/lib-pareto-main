@@ -7,7 +7,7 @@ import {
     number as nr,
     nested,
     array,
-    typeReference, dictionary, group, member, taggedUnion, types, func
+    typeReference, dictionary, group, member, taggedUnion, types, func, type
 } from "lib-pareto-typescript-project/dist/submodules/glossary/shorthands.p"
 
 import { definitionReference, constructor, algorithm } from "lib-pareto-typescript-project/dist/submodules/moduleDefinition/shorthands.p"
@@ -16,18 +16,17 @@ import * as mmoduleDefinition from "lib-pareto-typescript-project/dist/submodule
 
 const d = pr.wrapRawDictionary
 
-export const $: mmoduleDefinition.TModuleDefinition = {
+export const $: mmoduleDefinition.T.ModuleDefinition = {
     'glossary': {
         'parameters': d({}),
         'imports': d({
             "common": "glo-pareto-common",
         }),
-        'templates': d({}),
-        'types': types({
-            "Arguments": array(string()),
-            "MainData": group({
+        'types': d({
+            "Arguments": type(array(string())),
+            "MainData": type(group({
                 "arguments": member(reference("Arguments"))
-            })
+            }))
         }),
         'interfaces': d({}),
         'functions': d({
@@ -39,11 +38,11 @@ export const $: mmoduleDefinition.TModuleDefinition = {
             "common": "glo-pareto-common",
         }),
         'algorithms': d({
-            "log": algorithm(definitionReference("common", "Log")),
-            "logError": algorithm(definitionReference("common", "Log")),
-            "setExitCodeToFailed": algorithm(definitionReference("common", "Signal")),
-            "writeToStdErr": algorithm(definitionReference("common", "Log")),
-            "writeToStdOut": algorithm(definitionReference("common", "Log")),
+            "log": algorithm(definitionReference("common", {}, "Log")),
+            "logError": algorithm(definitionReference("common", {}, "Log")),
+            "setExitCodeToFailed": algorithm(definitionReference("common", {}, "Signal")),
+            "writeToStdErr": algorithm(definitionReference("common", {}, "Log")),
+            "writeToStdOut": algorithm(definitionReference("common", {}, "Log")),
         })
     },
 }

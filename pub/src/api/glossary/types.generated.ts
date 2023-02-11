@@ -2,12 +2,21 @@ import * as pt from 'pareto-core-types'
 
 import * as mcommon from "glo-pareto-common"
 
-export namespace GArguments {}
-export type GArguments = pt.Array<string>
-export type UArguments = GArguments
-
-export namespace GMainData {}
-export type GMainData = {
-    readonly 'arguments': UArguments
+export namespace T {
+    
+    export namespace Arguments {
+        
+        export type A = string
+    }
+    
+    export type Arguments = pt.Array<string>
+    
+    export namespace MainData {
+        
+        export type arguments = T.Arguments
+    }
+    
+    export type MainData = {
+        readonly 'arguments': T.Arguments
+    }
 }
-export type UMainData = GMainData
