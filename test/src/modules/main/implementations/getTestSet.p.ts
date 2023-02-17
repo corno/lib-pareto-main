@@ -1,7 +1,7 @@
 import * as pt from 'pareto-core-types'
 import * as pl from 'pareto-core-lib'
 import * as ps from 'pareto-core-state'
-import * as pr from 'pareto-core-raw'
+import * as pd from 'pareto-core-data'
 
 import * as mtest from "lib-pareto-test"
 
@@ -34,7 +34,7 @@ export const $$: api.CgetTestSet = ($) => {
     //     {
     //         getTestSet: ($) => {
     //             return pl.asyncValue({
-    //                 elements: pr.wrapRawDictionary({})
+    //                 elements: pd.wrapRawDictionary({})
     //             })
     //         },
     //         log: ($) => {
