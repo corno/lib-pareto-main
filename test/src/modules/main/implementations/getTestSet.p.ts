@@ -1,7 +1,7 @@
 import * as pt from 'pareto-core-types'
 import * as pl from 'pareto-core-lib'
 import * as ps from 'pareto-core-state'
-import * as pd from 'pareto-core-data'
+import * as pv from 'pareto-core-dev'
 
 import * as mtest from "lib-pareto-test"
 
@@ -38,7 +38,7 @@ export const $$: api.CgetTestSet = ($) => {
     //             })
     //         },
     //         log: ($) => {
-    //             pl.logDebugMessage($)
+    //             pv.logDebugMessage($)
     //         }
     //     }
     // )(
@@ -59,7 +59,7 @@ export const $$: api.CgetTestSet = ($) => {
 
 
     //test that a failing test indeed fails!!! now it will make the program exit with an error code
-    pl.logDebugMessage("FIXME: TEST THE LIB")
+    pv.logDebugMessage("FIXME: TEST THE LIB")
     createTest(
         "TODO: ACTUALLY TEST THE LIB",
         "TODO: ACTUALLY TEST THE LIB",
