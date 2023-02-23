@@ -13,7 +13,6 @@ import { CgetTestSet } from "../api"
 
 export const $$:CgetTestSet = ($) => {
 
-
     // pub.$a.createTestProgram(null, {
     //     getTestSet: () => {
     //         pl.panic("@@@")
@@ -55,7 +54,6 @@ export const $$:CgetTestSet = ($) => {
             }]
         })
     }
-
 
     //test that a failing test indeed fails!!! now it will make the program exit with an error code
     pv.logDebugMessage("FIXME: TEST THE LIB")
