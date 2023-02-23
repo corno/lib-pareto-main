@@ -1,5 +1,7 @@
-import * as mapi from "../api"
 
-export const $$: mapi.Clog = ($) => {
+
+import { Clog } from "../api"
+
+export const $$:Clog = ($) => {
     console.log($)
 }
