@@ -1,7 +1,7 @@
 import * as pi from 'pareto-core-internals'
 
-import * as api from "../api"
+import * as mapi from "../api"
 
-export const $$: api.CwriteToStdErr = ($) => {
+export const $$: mapi.CwriteToStdErr = ($) => {
     pi.panic("IMPLEMENT main:writeToStdErr")
 }

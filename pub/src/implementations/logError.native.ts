@@ -1,5 +1,5 @@
-import * as api from "../api"
+import * as mapi from "../api"
 
-export const $$: api.ClogError = ($) => {
+export const $$: mapi.ClogError = ($) => {
     console.error($)
 }

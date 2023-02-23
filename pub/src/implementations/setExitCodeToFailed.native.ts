@@ -1,5 +1,5 @@
-import * as api from "../api"
+import * as mapi from "../api"
 
-export const $$: api.CsetExitCodeToFailed = ($) => {
+export const $$: mapi.CsetExitCodeToFailed = ($) => {
     process.exitCode = 1
 }
