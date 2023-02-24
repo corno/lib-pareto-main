@@ -1,18 +1,18 @@
 import * as pt from 'pareto-core-types'
 
-import * as glo from "./glossary"
+import * as gglo from "./glossary"
 
-import * as mcommon from "glo-pareto-common"
+import * as gcommon from "glo-pareto-common"
 
-export type Clog = mcommon.FLog
+export type Clog = gcommon.FLog
 
-export type ClogError = mcommon.FLog
+export type ClogError = gcommon.FLog
 
-export type CsetExitCodeToFailed = mcommon.FSignal
+export type CsetExitCodeToFailed = gcommon.FSignal
 
-export type CwriteToStdErr = mcommon.FLog
+export type CwriteToStdErr = gcommon.FLog
 
-export type CwriteToStdOut = mcommon.FLog
+export type CwriteToStdOut = gcommon.FLog
 
 export type API = {
     log: Clog
