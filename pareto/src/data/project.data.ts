@@ -9,7 +9,7 @@ import { $ as api } from "./api.data"
 export const $: gproject.T.Project<pd.SourceLocation> = {
     'author': "Corno",
     'description': "provides functionality to implement the main (executable) function in Pareto",
-    'license': "ISC",
+    'license': "TBD",
     
     'dependencies': d({
         "glo-pareto-common": {},
