@@ -1,48 +1,19 @@
 import * as pd from 'pareto-core-data'
 
-import {
-    string,
-    reference,
-    boolean as bln,
-    number as nr,
-    nested,
-    array,
-    typeReference, dictionary, group, member, taggedUnion, types, func, type
-} from "lib-pareto-typescript-project/dist/submodules/glossary/shorthands"
+import { functionReference, constructor, algorithm, typeReference } from "lib-pareto-typescript-project/dist/submodules/api/shorthands"
 
-import { definitionReference, constructor, algorithm } from "lib-pareto-typescript-project/dist/submodules/moduleDefinition/shorthands"
-
-import * as gmoduleDefinition from "lib-pareto-typescript-project/dist/submodules/moduleDefinition"
-
+import * as gapi from "lib-pareto-typescript-project/dist/submodules/api"
 const d = pd.d
 
-export const $: gmoduleDefinition.T.ModuleDefinition<pd.SourceLocation> = {
-    'glossary': {
-        'parameters': d({}),
-        'imports': d({
-            "common": "glo-pareto-common",
-        }),
-        'types': d({
-            "Arguments": type(array(string())),
-            "MainData": type(group({
-                "arguments": member(reference("Arguments"))
-            }))
-        }),
-        'interfaces': d({}),
-        'functions': d({
-            "Main": func(typeReference("MainData"), null, null, null)
-        }),
-    },
-    'api': {
-        'imports': d({
-            "common": "glo-pareto-common",
-        }),
-        'algorithms': d({
-            "log": algorithm(definitionReference("common", {}, "Log")),
-            "logError": algorithm(definitionReference("common", {}, "Log")),
-            "setExitCodeToFailed": algorithm(definitionReference("common", {}, "Signal")),
-            "writeToStdErr": algorithm(definitionReference("common", {}, "Log")),
-            "writeToStdOut": algorithm(definitionReference("common", {}, "Log")),
-        })
-    },
+export const $: gapi.T.API<pd.SourceLocation> = {
+    'imports': d({
+        "common": "glo-pareto-common",
+    }),
+    'algorithms': d({
+        "log": algorithm(functionReference("common", {}, "Log")),
+        "logError": algorithm(functionReference("common", {}, "Log")),
+        "setExitCodeToFailed": algorithm(functionReference("common", {}, "Signal")),
+        "writeToStdErr": algorithm(functionReference("common", {}, "Log")),
+        "writeToStdOut": algorithm(functionReference("common", {}, "Log")),
+    })
 }
