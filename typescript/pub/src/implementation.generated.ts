@@ -5,7 +5,7 @@ import { $$ as isetExitCodeToFailed } from "./implementations/setExitCodeToFaile
 import { $$ as iwriteToStdErr } from "./implementations/writeToStdErr.native"
 import { $$ as iwriteToStdOut } from "./implementations/writeToStdOut.native"
 
-export const $a: API = {
+export const $r: API = {
     'log': ilog,
     'logError': ilogError,
     'setExitCodeToFailed': isetExitCodeToFailed,
