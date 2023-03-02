@@ -1,4 +1,4 @@
-import { API } from "./api"
+import { API } from "./definition/api.generated"
 import { $$ as ilog } from "./implementations/log.native"
 import { $$ as ilogError } from "./implementations/logError.native"
 import { $$ as isetExitCodeToFailed } from "./implementations/setExitCodeToFailed.native"
