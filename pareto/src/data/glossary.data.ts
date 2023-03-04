@@ -20,9 +20,6 @@ const d = pd.d
 
 export const $: gglossary.T.Glossary<pd.SourceLocation> =  {
     'parameters': d({}),
-    'imports': d({
-        "common": "glo-pareto-common",
-    }),
     'types': d({
         "Arguments": type(array(string())),
         "MainData": type(group({
