@@ -26,6 +26,7 @@ export const $: gglossary.T.Glossary<pd.SourceLocation> =  {
             "arguments": member(reference("Arguments"))
         }))
     }),
+    'builders': d({}),
     'interfaces': d({}),
     'functions': d({
         "Main": func(typeReference("MainData"), null, null, null)

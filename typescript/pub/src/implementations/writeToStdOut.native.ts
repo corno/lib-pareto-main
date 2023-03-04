@@ -2,8 +2,8 @@ import * as pi from 'pareto-core-internals'
 
 
 
-import { CwriteToStdOut } from "../definition/api.generated"
+import { writeToStdOut } from "../definition/api.generated"
 
-export const $$:CwriteToStdOut = ($) => {
+export const $$: writeToStdOut = ($) => {
     pi.panic("IMPLEMENT main:writeToStdOut")
 }

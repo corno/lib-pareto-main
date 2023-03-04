@@ -1,12 +1,12 @@
 import * as pt from 'pareto-core-types'
 
-import * as gcommon from "glo-pareto-common"
+import * as g_common from "glo-pareto-common"
 
 export namespace T {
     
     export namespace Arguments {
         
-        export type A = string
+        export type T = string
     }
     
     export type Arguments = pt.Array<string>

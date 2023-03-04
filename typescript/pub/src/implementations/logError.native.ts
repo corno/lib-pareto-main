@@ -1,7 +1,7 @@
 
 
-import { ClogError } from "../definition/api.generated"
+import { logError } from "../definition/api.generated"
 
-export const $$:ClogError = ($) => {
+export const $$: logError = ($) => {
     console.error($)
 }

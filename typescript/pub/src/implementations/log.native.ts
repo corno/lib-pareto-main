@@ -1,7 +1,7 @@
 
 
-import { Clog } from "../definition/api.generated"
+import { log } from "../definition/api.generated"
 
-export const $$:Clog = ($) => {
+export const $$: log = ($) => {
     console.log($)
 }

@@ -1,7 +1,7 @@
 
 
-import { CsetExitCodeToFailed } from "../definition/api.generated"
+import { setExitCodeToFailed } from "../definition/api.generated"
 
-export const $$:CsetExitCodeToFailed = ($) => {
+export const $$: setExitCodeToFailed = ($) => {
     process.exitCode = 1
 }
