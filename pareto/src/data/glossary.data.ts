@@ -23,12 +23,12 @@ export const $: gglossary.T.Glossary<pd.SourceLocation> =  {
     'types': d({
         "Arguments": type(array(string())),
         "MainData": type(group({
-            "arguments": member(reference("Arguments"))
-        }))
+            "arguments": member(reference("Arguments")),
+        })),
     }),
     'builders': d({}),
     'interfaces': d({}),
     'functions': d({
-        "Main": func(typeReference("MainData"), null, null, null)
+        "Main": func(typeReference("MainData"), null, null, null),
     }),
 }

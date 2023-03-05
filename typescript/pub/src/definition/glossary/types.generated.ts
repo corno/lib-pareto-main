@@ -6,7 +6,7 @@ export namespace T {
     
     export namespace Arguments {
         
-        export type T = string
+        export type A = string
     }
     
     export type Arguments = pt.Array<string>

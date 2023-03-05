@@ -12,5 +12,5 @@ export const $: gapi.T.API<pd.SourceLocation> = {
         "setExitCodeToFailed": algorithm(functionReference("common", {}, "Signal")),
         "writeToStdErr": algorithm(functionReference("common", {}, "Log")),
         "writeToStdOut": algorithm(functionReference("common", {}, "Log")),
-    })
+    }),
 }
