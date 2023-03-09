@@ -1,6 +1,6 @@
 
 
-import { log } from "../definition/api.generated"
+import { log } from "../api.generated"
 
 export const $$: log = ($) => {
     console.log($)

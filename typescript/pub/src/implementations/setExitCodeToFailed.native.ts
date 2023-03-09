@@ -1,6 +1,6 @@
 
 
-import { setExitCodeToFailed } from "../definition/api.generated"
+import { setExitCodeToFailed } from "../api.generated"
 
 export const $$: setExitCodeToFailed = ($) => {
     process.exitCode = 1
