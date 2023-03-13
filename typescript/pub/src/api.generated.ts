@@ -1,16 +1,16 @@
 import * as pt from 'pareto-core-types'
 
-import * as g_common from "glo-pareto-common"
+import * as g_this from "./glossary"
 
-export type log = g_common.F.Log
+export type log = g_this.F.TEMPLog
 
-export type logError = g_common.F.Log
+export type logError = g_this.F.TEMPLog
 
-export type setExitCodeToFailed = g_common.F.Signal
+export type setExitCodeToFailed = g_this.F.TEMPSignal
 
-export type writeToStdErr = g_common.F.Log
+export type writeToStdErr = g_this.F.TEMPLog
 
-export type writeToStdOut = g_common.F.Log
+export type writeToStdOut = g_this.F.TEMPLog
 
 export type API = {
     log: log

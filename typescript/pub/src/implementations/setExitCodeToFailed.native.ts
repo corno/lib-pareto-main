@@ -2,6 +2,8 @@
 
 import { setExitCodeToFailed } from "../api.generated"
 
-export const $$: setExitCodeToFailed = ($) => {
-    process.exitCode = 1
+export const $$: setExitCodeToFailed = ($, $c) => {
+    $c(($) => {
+        process.exitCode = 1
+    })
 }

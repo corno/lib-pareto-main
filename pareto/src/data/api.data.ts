@@ -1,16 +1,16 @@
 import * as pd from 'pareto-core-data'
 
-import { functionReference, constructor, algorithm, typeReference } from "lib-pareto-typescript-project/dist/submodules/api/shorthands"
+import { functionReference, constructor, algorithm, typeReference } from "lib-pareto-typescript-project/dist/submodules/project/shorthands"
 
-import * as gapi from "lib-pareto-typescript-project/dist/submodules/api"
+import * as g_project from "lib-pareto-typescript-project/dist/submodules/project"
 const d = pd.d
 
-export const $: gapi.T.API<pd.SourceLocation> = {
+export const $: g_project.T.Module.api.root<pd.SourceLocation> = {
     'algorithms': d({
-        "log": algorithm(functionReference("common", {}, "Log")),
-        "logError": algorithm(functionReference("common", {}, "Log")),
-        "setExitCodeToFailed": algorithm(functionReference("common", {}, "Signal")),
-        "writeToStdErr": algorithm(functionReference("common", {}, "Log")),
-        "writeToStdOut": algorithm(functionReference("common", {}, "Log")),
+        "log": algorithm(functionReference("this", {}, "TEMPLog")),
+        "logError": algorithm(functionReference("this", {}, "TEMPLog")),
+        "setExitCodeToFailed": algorithm(functionReference("this", {}, "TEMPSignal")),
+        "writeToStdErr": algorithm(functionReference("this", {}, "TEMPLog")),
+        "writeToStdOut": algorithm(functionReference("this", {}, "TEMPLog")),
     }),
 }
