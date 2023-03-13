@@ -11,9 +11,11 @@ import {
     sfunc,
     type,
     optional,
-    reference,
     number,
     builderReference,
+    ref,
+    externalTypeReference,
+    imp,
 } from "lib-pareto-typescript-project/dist/submodules/glossary/shorthands"
 
 import * as g_glossary from "lib-pareto-typescript-project/dist/submodules/glossary"
@@ -21,18 +23,21 @@ const d = pd.d
 
 export const $: g_glossary.T.Glossary<pd.SourceLocation> = {
     'parameters': d({}),
+    'imports': d({
+        "common": imp({}),
+    }),
     'types': d({
         "Arguments": type(array(string())),
         "MainData": type(group({
-            "arguments": member(reference("Arguments")),
+            "arguments": member(ref(typeReference("Arguments"))),
         })),
     }),
     'type': ['synchronous', {
         'builders': d({}),
         'functions': d({
             "Main": sfunc(typeReference("MainData"), null, null, null),
-            "TEMPLog": sfunc(typeReference("common", "Null"), builderReference("common", "String"), null, null),
-            "TEMPSignal": sfunc(typeReference("common", "Null"), builderReference("common", "Null"), null, null),
+            "TEMPLog": sfunc(externalTypeReference("common", "Null"), builderReference("common", "String"), null, null),
+            "TEMPSignal": sfunc(externalTypeReference("common", "Null"), builderReference("common", "Null"), null, null),
         }),
     }],
 }
