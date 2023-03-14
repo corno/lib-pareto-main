@@ -9,4 +9,9 @@ export namespace B {
     export type Main = ($: T.MainData, ) => void
 }
 
+export namespace C {
+    
+    export type Main = ($b: B.Main) => void
+}
+
 export namespace F {}
