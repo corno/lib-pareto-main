@@ -31,6 +31,7 @@ export const $: g_project.T.Project<pd.SourceLocation> = {
 
             'imports': d({
                 "this": this_(),
+                "common": external("glo-pareto-common"),
             }),
         },
         'nativeDependencies': d({}),

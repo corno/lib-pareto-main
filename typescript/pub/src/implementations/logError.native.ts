@@ -2,7 +2,7 @@
 
 import { logError } from "../api.generated"
 
-export const $$: logError = ($, $c) => {
+export const $$: logError = ($c) => {
     $c(($) => {
         console.error($)
     })

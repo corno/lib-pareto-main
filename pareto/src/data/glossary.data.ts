@@ -16,6 +16,7 @@ import {
     ref,
     externalTypeReference,
     imp,
+    builderMethod,
 } from "lib-pareto-typescript-project/dist/submodules/glossary/shorthands"
 
 import * as g_glossary from "lib-pareto-typescript-project/dist/submodules/glossary"
@@ -33,11 +34,11 @@ export const $: g_glossary.T.Glossary<pd.SourceLocation> = {
         })),
     }),
     'type': ['synchronous', {
-        'builders': d({}),
-        'functions': d({
-            "Main": sfunc(typeReference("MainData"), null, null, null),
-            "TEMPLog": sfunc(externalTypeReference("common", "Null"), builderReference("common", "String"), null, null),
-            "TEMPSignal": sfunc(externalTypeReference("common", "Null"), builderReference("common", "Null"), null, null),
+        'builders': d({
+            "Main": builderMethod(typeReference("MainData")),
+
+
         }),
+        'functions': d<g_glossary.T.Glossary._ltype.synchronous.functions.D<pd.SourceLocation>>({}),
     }],
 }
