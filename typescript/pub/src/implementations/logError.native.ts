@@ -1,8 +1,6 @@
+import { A } from "../api.generated"
 
-
-import { logError } from "../api.generated"
-
-export const $$: logError = ($c) => {
+export const $$: A.logError = ($c) => {
     $c(($) => {
         console.error($)
     })

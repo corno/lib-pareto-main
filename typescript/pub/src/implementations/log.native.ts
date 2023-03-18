@@ -1,8 +1,6 @@
+import { A } from "../api.generated"
 
-
-import { log } from "../api.generated"
-
-export const $$: log = ($c) => {
+export const $$: A.log = ($c) => {
     $c(($) => {
         console.log($)
     })

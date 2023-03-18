@@ -1,8 +1,6 @@
+import { A } from "../api.generated"
 
-
-import { setExitCodeToFailed } from "../api.generated"
-
-export const $$: setExitCodeToFailed = ($c) => {
+export const $$: A.setExitCodeToFailed = ($c) => {
     $c(($) => {
         process.exitCode = 1
     })

@@ -2,21 +2,23 @@ import * as pt from 'pareto-core-types'
 
 import * as g_common from "glo-pareto-common"
 import * as g_this from "./glossary"
-
-export type log = ($c: g_common.C.String) => void
-
-export type logError = ($c: g_common.C.String) => void
-
-export type setExitCodeToFailed = ($c: g_common.C.Null) => void
-
-export type writeToStdErr = ($c: g_common.C.String) => void
-
-export type writeToStdOut = ($c: g_common.C.String) => void
+export namespace A {
+    
+    export type log = g_common.SYNC.I3.String
+    
+    export type logError = g_common.SYNC.I3.String
+    
+    export type setExitCodeToFailed = g_common.SYNC.I3.Null
+    
+    export type writeToStdErr = g_common.SYNC.I3.String
+    
+    export type writeToStdOut = g_common.SYNC.I3.String
+}
 
 export type API = {
-    log: log
-    logError: logError
-    setExitCodeToFailed: setExitCodeToFailed
-    writeToStdErr: writeToStdErr
-    writeToStdOut: writeToStdOut
+    log: A.log
+    logError: A.logError
+    setExitCodeToFailed: A.setExitCodeToFailed
+    writeToStdErr: A.writeToStdErr
+    writeToStdOut: A.writeToStdOut
 }

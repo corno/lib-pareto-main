@@ -1,8 +1,8 @@
 import * as pi from 'pareto-core-internals'
 
-import { writeToStdErr } from "../api.generated"
+import { A } from "../api.generated"
 
-export const $$: writeToStdErr = ($c) => {
+export const $$: A.writeToStdErr = ($c) => {
     $c(($) => {
         pi.panic("IMPLEMENT main:writeToStdErr")
     })
