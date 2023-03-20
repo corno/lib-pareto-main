@@ -1,7 +1,9 @@
 import { A } from "../api.generated"
 
-export const $$: A.logError = ($is) => {
-    return ($) => {
-        console.error($)
+export const $$: A.logError = () => {
+    return ($is) => {
+        return ($) => {
+            console.error($)
+        }
     }
 }
