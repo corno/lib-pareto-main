@@ -6,9 +6,25 @@ import * as g_common from "glo-pareto-common"
 
 export namespace ASYNC {
     
-    export namespace I {}
+    export namespace I {
+        
+        export type Log = ($: g_common.T.String, ) => void
+        
+        export type Signal = ($: g_common.T.Null, ) => void
+    }
     
-    export namespace A {}
+    export namespace A {
+        
+        
+        export namespace C {
+            export type CreateSignaler = ($is: {}) => ASYNC.I.Signal
+        }
+        
+        
+        export namespace C {
+            export type CreateStringLogger = ($is: {}) => ASYNC.I.Log
+        }
+    }
 }
 
 export namespace SYNC {

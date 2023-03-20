@@ -7,10 +7,10 @@ const d = pd.d
 
 export const $: g_project.T.ModuleDefinition.api.root<pd.SourceLocation> = {
     'algorithms': d({
-        "log": algorithm(aconstructor("common", {}, "String")),
-        "logError": algorithm(aconstructor("common", {}, "String")),
-        "setExitCodeToFailed": algorithm(aconstructor("common", {}, "Null")),
-        "writeToStdErr": algorithm(aconstructor("common", {}, "String")),
-        "writeToStdOut": algorithm(aconstructor("common", {}, "String")),
+        "log": algorithm(aconstructor("this", {}, "CreateStringLogger")),
+        "logError": algorithm(aconstructor("this", {}, "CreateStringLogger")),
+        "setExitCodeToFailed": algorithm(aconstructor("this", {}, "CreateSignaler")),
+        "writeToStdErr": algorithm(aconstructor("this", {}, "CreateStringLogger")),
+        "writeToStdOut": algorithm(aconstructor("this", {}, "CreateStringLogger")),
     }),
 }

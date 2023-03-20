@@ -5,15 +5,15 @@ import * as g_this from "./glossary"
 
 export namespace A {
     
-    export type log = g_common.ASYNC.A.C.String
+    export type log = g_this.ASYNC.A.C.CreateStringLogger
     
-    export type logError = g_common.ASYNC.A.C.String
+    export type logError = g_this.ASYNC.A.C.CreateStringLogger
     
-    export type setExitCodeToFailed = g_common.ASYNC.A.C.Null
+    export type setExitCodeToFailed = g_this.ASYNC.A.C.CreateSignaler
     
-    export type writeToStdErr = g_common.ASYNC.A.C.String
+    export type writeToStdErr = g_this.ASYNC.A.C.CreateStringLogger
     
-    export type writeToStdOut = g_common.ASYNC.A.C.String
+    export type writeToStdOut = g_this.ASYNC.A.C.CreateStringLogger
 }
 
 export type API = {

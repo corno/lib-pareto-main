@@ -1,9 +1,9 @@
-import * as pi from 'pareto-core-internals'
+import * as n_process from "process"
 
 import { A } from "../api.generated"
 
-export const $$: A.writeToStdOut = ($c) => {
-    $c(($) => {
-        pi.panic("IMPLEMENT main:writeToStdOut")
-    })
+export const $$: A.writeToStdOut = ($is) => {
+    return ($) => {
+        n_process.stdout.write($)
+    }
 }
