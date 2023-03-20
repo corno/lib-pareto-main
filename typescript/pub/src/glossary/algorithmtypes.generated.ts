@@ -8,9 +8,7 @@ export namespace ASYNC {
     
     export namespace I {}
     
-    export namespace C {}
-    
-    export namespace F {}
+    export namespace A {}
 }
 
 export namespace SYNC {
@@ -20,21 +18,10 @@ export namespace SYNC {
         export type Main = ($: T.MainData, ) => void
     }
     
-    export namespace I2 {
+    export namespace IW {
         
-        export type Main = ($b: I.Main) => void
+        export type Main = ($c: ($b: I.Main) => void) => void
     }
     
-    export namespace I3 {
-        
-        export type Main = ($c: I2.Main) => void
-    }
-    
-    export namespace C {}
-    
-    export namespace C2 {}
-    
-    export namespace C3 {}
-    
-    export namespace F {}
+    export namespace A {}
 }
