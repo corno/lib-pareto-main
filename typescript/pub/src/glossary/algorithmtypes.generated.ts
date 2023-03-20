@@ -17,12 +17,12 @@ export namespace ASYNC {
         
         
         export namespace C {
-            export type CreateSignaler = ($is: {}) => ASYNC.I.Signal
+            export type CreateSignaler = ($is: null) => ASYNC.I.Signal
         }
         
         
         export namespace C {
-            export type CreateStringLogger = ($is: {}) => ASYNC.I.Log
+            export type CreateStringLogger = ($is: null) => ASYNC.I.Log
         }
     }
 }

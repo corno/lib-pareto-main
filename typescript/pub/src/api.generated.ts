@@ -17,9 +17,9 @@ export namespace A {
 }
 
 export type API = {
-    log: A.log
-    logError: A.logError
-    setExitCodeToFailed: A.setExitCodeToFailed
-    writeToStdErr: A.writeToStdErr
-    writeToStdOut: A.writeToStdOut
+    readonly 'log': A.log
+    readonly 'logError': A.logError
+    readonly 'setExitCodeToFailed': A.setExitCodeToFailed
+    readonly 'writeToStdErr': A.writeToStdErr
+    readonly 'writeToStdOut': A.writeToStdOut
 }
