@@ -13,6 +13,8 @@ export namespace ASYNC {
             'end': () => void
         }
         
+        export type Main = ($: T.MainData, ) => void
+        
         export type Signal = {
             'data': () => void
             'end': () => void
@@ -20,6 +22,11 @@ export namespace ASYNC {
     }
     
     export namespace A {
+        
+        
+        export namespace C {
+            export type CreateMain = ($is: null) => ASYNC.I.Main
+        }
         
         
         export namespace C {
@@ -35,15 +42,9 @@ export namespace ASYNC {
 
 export namespace SYNC {
     
-    export namespace I {
-        
-        export type Main = ($: T.MainData, ) => void
-    }
+    export namespace I {}
     
-    export namespace IW {
-        
-        export type Main = ($c: ($b: I.Main) => void) => void
-    }
+    export namespace IW {}
     
     export namespace A {}
 }
