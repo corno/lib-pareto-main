@@ -1,7 +1,7 @@
 import { A } from "../api.generated"
 
 export const $$: A.setExitCodeToFailed = () => {
-    return ($is) => {
+    return () => {
         return {
             'data': () => {
                 process.exitCode = 1
