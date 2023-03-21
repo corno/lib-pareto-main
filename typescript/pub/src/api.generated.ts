@@ -5,21 +5,21 @@ import * as g_this from "./glossary"
 
 export namespace A {
     
-    export type log = () => g_this.ASYNC.A.C.CreateStringLogger
+    export type createErrorLogger = () => g_this.ASYNC.A.C.CreateStringLogger
     
-    export type logError = () => g_this.ASYNC.A.C.CreateStringLogger
+    export type createLogger = () => g_this.ASYNC.A.C.CreateStringLogger
+    
+    export type createStdErrWriter = () => g_this.ASYNC.A.C.CreateStringLogger
+    
+    export type createStdOutWriter = () => g_this.ASYNC.A.C.CreateStringLogger
     
     export type setExitCodeToFailed = () => g_this.ASYNC.A.C.CreateSignaler
-    
-    export type writeToStdErr = () => g_this.ASYNC.A.C.CreateStringLogger
-    
-    export type writeToStdOut = () => g_this.ASYNC.A.C.CreateStringLogger
 }
 
 export type API = {
-    readonly 'log': A.log
-    readonly 'logError': A.logError
+    readonly 'createErrorLogger': A.createErrorLogger
+    readonly 'createLogger': A.createLogger
+    readonly 'createStdErrWriter': A.createStdErrWriter
+    readonly 'createStdOutWriter': A.createStdOutWriter
     readonly 'setExitCodeToFailed': A.setExitCodeToFailed
-    readonly 'writeToStdErr': A.writeToStdErr
-    readonly 'writeToStdOut': A.writeToStdOut
 }

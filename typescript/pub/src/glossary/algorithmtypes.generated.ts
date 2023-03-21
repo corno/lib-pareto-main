@@ -8,9 +8,15 @@ export namespace ASYNC {
     
     export namespace I {
         
-        export type Log = ($: g_common.T.String, ) => void
+        export type Log = {
+            'data': ($: g_common.T.String, ) => void
+            'end': () => void
+        }
         
-        export type Signal = ($: g_common.T.Null, ) => void
+        export type Signal = {
+            'data': () => void
+            'end': () => void
+        }
     }
     
     export namespace A {
