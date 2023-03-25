@@ -1,7 +1,8 @@
 import * as pd from 'pareto-core-data'
 
 import {
-    constructor, aInterfaceMethod, aInterfaceReference, array, externalTypeReference, group, imp, member, ref, sInterfaceReference, streamconsumer, string, type, typeReference
+    constructor, aInterfaceMethod, aInterfaceReference, array, externalTypeReference, group, imp, member, ref,
+    sInterfaceReference, streamconsumer, string, type, typeReference, aInterface
 } from "lib-pareto-typescript-project/dist/submodules/glossary/shorthands"
 
 import * as g_glossary from "lib-pareto-typescript-project/dist/submodules/glossary"
@@ -20,15 +21,15 @@ export const $: g_glossary.T.Glossary<pd.SourceLocation> = {
     }),
     'asynchronous': {
         'interfaces': d({
-            "Log": streamconsumer(
+            "Log": aInterface(streamconsumer(
                 aInterfaceMethod(externalTypeReference("common", "String")),
                 aInterfaceMethod(null),
-            ),
-            "Signal": streamconsumer(
+            )),
+            "Signal": aInterface(streamconsumer(
                 aInterfaceMethod(null),
                 aInterfaceMethod(null),
-            ),
-            "Main": aInterfaceMethod(typeReference("MainData")),
+            )),
+            "Main": aInterface(aInterfaceMethod(typeReference("MainData"))),
         }),
         'algorithms': d({
             "CreateSignaler": constructor(aInterfaceReference("Signal"), {}),
