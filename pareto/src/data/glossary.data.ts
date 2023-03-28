@@ -13,12 +13,15 @@ export const $: g_glossary.T.Glossary<pd.SourceLocation> = {
     'imports': d({
         "common": imp({}),
     }),
-    'types': d({
-        "Arguments": type(array(string())),
-        "MainData": type(group({
-            "arguments": member(ref(typeReference("Arguments"))),
-        })),
-    }),
+    'root': {
+        'namespaces': d({}),
+        'types': d({
+            "Arguments": type(array(string())),
+            "MainData": type(group({
+                "arguments": member(ref(typeReference("Arguments"))),
+            })),
+        }),
+    },
     'asynchronous': {
         'interfaces': d({
             "Log": aInterface(streamconsumer(
