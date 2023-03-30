@@ -1,12 +1,14 @@
 import { A } from "../api.generated"
 
 export const $$: A.createErrorLogger = () => {
-    return () => {
-        return {
-            'data': ($) => {
-                console.error($)
-            },
-            'end': () => { }
+    return {
+        'construct': () => {
+            return {
+                'data': ($) => {
+                    console.error($)
+                },
+                'end': () => { }
+            }
         }
     }
 }

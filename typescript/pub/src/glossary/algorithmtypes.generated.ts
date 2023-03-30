@@ -25,17 +25,23 @@ export namespace ASYNC {
         
         
         export namespace C {
-            export type CreateMain = () => ASYNC.I.Main
+            export type CreateMain = {
+                'construct': () => ASYNC.I.Main
+            }
         }
         
         
         export namespace C {
-            export type CreateSignaler = () => ASYNC.I.Signal
+            export type CreateSignaler = {
+                'construct': () => ASYNC.I.Signal
+            }
         }
         
         
         export namespace C {
-            export type CreateStringLogger = () => ASYNC.I.Log
+            export type CreateStringLogger = {
+                'construct': () => ASYNC.I.Log
+            }
         }
     }
 }
