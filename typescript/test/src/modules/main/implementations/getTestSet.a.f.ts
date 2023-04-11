@@ -63,9 +63,7 @@ export const $$: A.getTestSet = ($) => {
         "TODO: ACTUALLY TEST THE LIB",
     )
 
-    return pa.asyncValue(null).map(() => {
-        return pa.asyncValue({
-            elements: builder.getDictionary()
-        })
-    })
+    return pa.asyncValue(null).map(() => pa.asyncValue({
+        elements: builder.getDictionary()
+    }))
 }

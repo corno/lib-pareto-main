@@ -5,7 +5,7 @@ import { $$ as icreateStdErrWriter } from "./implementations/createStdErrWriter.
 import { $$ as icreateStdOutWriter } from "./implementations/createStdOutWriter.native"
 import { $$ as isetExitCodeToFailed } from "./implementations/setExitCodeToFailed.native"
 
-export const $r: API = {
+export const $api: API = {
     'createErrorLogger': icreateErrorLogger,
     'createLogger': icreateLogger,
     'createStdErrWriter': icreateStdErrWriter,
