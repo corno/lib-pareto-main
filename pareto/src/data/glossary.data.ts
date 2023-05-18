@@ -9,9 +9,9 @@ import * as g_glossary from "lib-pareto-typescript-project/dist/submodules/gloss
 const d = pd.d
 
 export const $: g_glossary.T.Glossary<pd.SourceLocation> = {
-    'parameters': d({}),
+    'glossary parameters':d({}),
     'imports': d({
-        "common": imp({}),
+        "common": imp(),
     }),
     'root': {
         'namespaces': d({}),
@@ -37,7 +37,7 @@ export const $: g_glossary.T.Glossary<pd.SourceLocation> = {
         'algorithms': d({
             "CreateSignaler": constructor(aInterfaceReference("Signal"), {}),
             "CreateStringLogger": constructor(aInterfaceReference("Log"), {}),
-            "CreateMain": constructor(sInterfaceReference("Main"), {}),
+            "CreateMain": constructor(aInterfaceReference("Main"), {}),
         }),
     },
     'synchronous': {
