@@ -15,7 +15,7 @@ export namespace T {
     
     export namespace MainData {
         
-        export type arguments = T.Arguments
+        export type _larguments = T.Arguments
     }
     
     export type MainData = {
